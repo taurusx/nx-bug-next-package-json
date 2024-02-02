@@ -19,4 +19,12 @@ const plugins = [
   withNx,
 ];
 
-module.exports = composePlugins(...plugins)(nextConfig);
+const packageJsonAppVersion = require('./package.json').version;
+
+// https://nx.dev/recipes/next/next-config-setup#composing-plugins-using-utility-nx-16-and-later
+module.exports = composePlugins(...plugins, function debug(config) {
+  // The debug plugin will be called last
+  // console.log({ config });
+  console.log({ packageJsonAppVersion });
+  return config;
+})(nextConfig);

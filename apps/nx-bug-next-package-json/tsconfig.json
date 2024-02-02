@@ -25,7 +25,8 @@
     "**/*.jsx",
     "../../apps/nx-bug-next-package-json/.next/types/**/*.ts",
     "../../dist/apps/nx-bug-next-package-json/.next/types/**/*.ts",
-    "next-env.d.ts"
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
